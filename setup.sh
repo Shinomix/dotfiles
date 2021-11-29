@@ -19,6 +19,9 @@ echo "alias jc='journalctl'" >> ~/.zshrc
 echo "alias jcu='journalctl -u'" >> ~/.zshrc
 echo "alias jcuf='journalctl -f -u'" >> ~/.zshrc
 
+# Set emacs as the default gith editor in place of vim
+echo "git config --global core.editor 'emacs -nw'" >> ~/.zshrc
+
 source ~/.zshrc
 
 # Install minidev from local (if available) or remote
