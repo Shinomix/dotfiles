@@ -1,0 +1,29 @@
+# Add aliases
+bindkey '\e[A' history-search-backward
+bindkey '\e[B' history-search-forward
+
+alias emacs='emacs -nw'
+
+alias g='git'
+alias gc='git commit -v'
+alias gd='git diff'
+alias grbi='git rebase -i'
+alias gst='git status'
+
+alias sc='systemctl'
+alias scf='systemctl list-units --failed'
+alias jc='journalctl'
+alias jcu='journalctl -u'
+alias jcuf='journalctl -f -u'
+
+# Set emacs as the default git editor in place of vim
+git config --global core.editor 'emacs -nw'
+
+PROMPT="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )"
+PROMPT+=' %{$fg[cyan]%}%c%{$reset_color%} %{$fg_bold[green]%}$(whoami)%{$reset_color%} $(git_prompt_info)'
+export PROMPT
+
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[blue]%}git:(%{$fg[red]%}"
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} "
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[blue]%}) %{$fg[yellow]%}✗"
+ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
