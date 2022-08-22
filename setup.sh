@@ -23,8 +23,8 @@ echo "alias jcuf='journalctl -f -u'" >> ~/.zshrc
 echo "git config --global core.editor 'emacs -nw'" >> ~/.zshrc
 
 # Customize default oh-my-zsh prompt to indicate the current user
-echo 'PROMPT="%(?:%{$fg_bold[green]%}➜ :\{$fg_bold[red]%}"' >> ~/.zshrc
-echo 'PROMPT+=" %{$fg[cyan]%}%c%{$reset_color%} %{$fg_bold[green]%}$(whoami)%{$reset_color%} $(git_prompt_info)"' >> ~/.zshrc
+echo 'PROMPT="%(?:%{$fg_bold[green]%}➜ %\{$fg_bold[red]%➜ }"' >> ~/.zshrc
+echo 'PROMPT+=" %{$fg[blue]%}%c%{$reset_color%} %{$fg_bold[green]%}$(whoami)%{$reset_color%} $(git_prompt_info)"' >> ~/.zshrc
 echo "export PROMPT" >> ~/.zshrc
 
 echo 'ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[blue]%}git:(%{$fg[red]%}"' >> ~/.zshrc
